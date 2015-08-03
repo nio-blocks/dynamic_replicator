@@ -1,7 +1,7 @@
 DynamicReplicator
 =========
 
-Each incoming signal is replicated x times, where x is the length of *list*. Each output signal with have a new attribute, *title*, with the value of the list.
+Each incoming signal is replicated x times, where x is the length of *list*. Each output signal will have a new attribute, *title*, with the value of the list.
 
 If *list* fails to evaluate, then *title* will be set to None.
 
