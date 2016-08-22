@@ -1,9 +1,9 @@
 DynamicReplicator
 =================
 
-Each incoming signal is replicated x times, where x is the number of items in the list that *list* evaluates to. Each output signal will be the same as the input signal with a new attribute, *title*, set to a value of the list.
+Each incoming signal is replicated x times, where x is the number of items in the list that *list* evaluates to. Each output signal will be the same as the input signal with a new attribute, `title`, set to a value of the list.
 
-If *list* fails to evaluate, then *title* will be set to None and one signal will be notified.
+If *list* fails to evaluate, then `title` will be set to `None` and one signal will be notified.
 
 Properties
 ----------
@@ -25,7 +25,7 @@ It is likely that the signal will have a field from which *list* will reference.
 
 Output
 ------
-Creates a new signal for each value in *list*. The new signals have a new attribute *title* that is the value of the list item.
+Creates a new signal for each value in *list*. The new signals have a new attribute `title` that is the value of the list item.
 
 Example
 -------
