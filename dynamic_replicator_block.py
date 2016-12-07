@@ -1,19 +1,19 @@
-from nio.common.block.base import Block
-from nio.common.signal.base import Signal
-from nio.common.discovery import Discoverable, DiscoverableType
-from nio.metadata.properties.string import StringProperty
-from nio.metadata.properties.expression import ExpressionProperty
+from nio.block.base import Block
+from nio.signal.base import Signal
+from nio.util.discovery import discoverable
+from nio.properties.string import StringProperty
+from nio.properties import Property
 
 
-@Discoverable(DiscoverableType.block)
+@discoverable
 class DynamicReplicator(Block):
     """Each incoming signal is replicated x times, where x
     is the length of list. Each output signal with have a
     new attribute, title, with the value of the list.
 
     """
-    title = StringProperty(title='Attribute Title')
-    list = ExpressionProperty(title='List')
+    title = StringProperty(title='Attribute Title', default='')
+    list = Property(title='List', default='')
 
     def process_signals(self, signals):
         return_signals = []
@@ -25,7 +25,7 @@ class DynamicReplicator(Block):
             values = [None] if not values else values
             for value in values:
                 sig = Signal(signal.to_dict())
-                setattr(sig, self.title, value)
+                setattr(sig, self.title(), value)
                 return_signals.append(sig)
         if return_signals:
             self.notify_signals(return_signals)
