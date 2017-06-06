@@ -1,0 +1,7 @@
+{
+  "nio/DynamicReplicator": {
+    "Language": "Python",
+    "Reference": "github.com/nio-blocks/dynamic_replicator.git@v1.0.0",
+    "Version": "1.0.0"
+  }
+}
