@@ -1,24 +1,25 @@
 {
-  "nio/DynamicReplicator": {
-    "Commands": {},
-    "Version": "1.0.0",
-    "Description": "Each incoming signal is replicated x times, where x is the number of items in the list that `list` evaluates to. Each output signal will be the same as the input signal with a new attribute, `title`, set to a value of the list.\nIf `list` fails to evaluate, then `title` will be set to `None` and one signal will be notified.",
-    "Category": "SignalModifier",
-    "Properties": {
-      "title": {
-        "description": "Name of attribute to be added with list value."
-      },
-      "list": {
-        "description": "An expression property that needs to evaluate to a list. A signal will be notified from the block for each item in the list."
-      }
-    },
-    "Input": "It is likely that the signal will have a field from which `list` will reference.",
-    "Dependencies": [
-      "None"
-    ],
-    "Miscellaneous": {
-      "Example": "Block Config:\n```\n{\n'title': 'meal',\n'list': '{{ $meals }}'\n}\n```\nInput Signal:\n```\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken']\n}\n```\n3 Output Signals:\n```\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken'],\n'meal': 'pork chop'\n}\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken'],\n'meal': 'pizza'\n}\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken'],\n'meal': 'chicken'\n}\n```"
-    },
-    "Output": "Creates a new signal for each value in `list`. The new signals have a new attribute `title` that is the value of the list item."
-  }
+    "nio/DynamicReplicator": {
+        "Commands": {},
+        "Description": "Each incoming signal is replicated x times, where x is the number of items in the list that `list` evaluates to. Each output signal will be the same as the input signal with a new attribute, `title`, set to a value of the list.\nIf `list` fails to evaluate, then `title` will be set to `None` and one signal will be notified.",
+        "Properties": {
+            "list": {
+                "description": "An expression property that needs to evaluate to a list. A signal will be notified from the block for each item in the list."
+            },
+            "title": {
+                "description": "Name of attribute to be added with list value."
+            }
+        },
+        "Category": "SignalModifier",
+        "Miscellaneous": {
+            "Example": "Block Config:\n```\n{\n'title': 'meal',\n'list': '{{ $meals }}'\n}\n```\nInput Signal:\n```\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken']\n}\n```\n3 Output Signals:\n```\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken'],\n'meal': 'pork chop'\n}\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken'],\n'meal': 'pizza'\n}\n{\n'type': 'meal',\n'meals': ['pork chop', 'pizza', 'chicken'],\n'meal': 'chicken'\n}\n```"
+        },
+        "Input": {
+            "Description": "It is likely that the signal will have a field from which `list` will reference."
+        },
+        "Version": "1.0.0",
+        "Output": {
+            "Description": "Creates a new signal for each value in `list`. The new signals have a new attribute `title` that is the value of the list item."
+        }
+    }
 }
