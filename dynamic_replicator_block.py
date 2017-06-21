@@ -20,8 +20,9 @@ class DynamicReplicator(Block):
         for signal in signals:
             try:
                 values = self.list(signal)
-            except Exception as e:
+            except Exception:
                 values = [None]
+                self.logger.exception("Failed to evaluate list")
             values = [None] if not values else values
             for value in values:
                 sig = Signal(signal.to_dict())
