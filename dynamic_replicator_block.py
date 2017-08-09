@@ -1,8 +1,7 @@
 from nio.block.base import Block
 from nio.signal.base import Signal
 from nio.util.discovery import discoverable
-from nio.properties.string import StringProperty
-from nio.properties import Property
+from nio.properties import Property, StringProperty, VersionProperty
 
 
 @discoverable
@@ -12,6 +11,7 @@ class DynamicReplicator(Block):
     new attribute, title, with the value of the list.
 
     """
+    version = VersionProperty('1.0.0')
     title = StringProperty(title='Attribute Title', default='')
     list = Property(title='List', default='')
 
