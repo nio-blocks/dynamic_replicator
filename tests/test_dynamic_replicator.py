@@ -1,6 +1,7 @@
 from nio.block.terminals import DEFAULT_TERMINAL
 from nio.testing.block_test_case import NIOBlockTestCase
 from nio.signal.base import Signal
+
 from ..dynamic_replicator_block import DynamicReplicator
 
 
