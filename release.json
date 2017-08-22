@@ -1,7 +1,12 @@
 {
   "nio/DynamicReplicator": {
     "language": "Python",
-    "version": "1.0.0",
-    "url": "git://github.com/nio-blocks/dynamic_replicator.git"
+    "url": "git://github.com//nio-blocks/dynamic_replicator.git",
+    "version": "1.0.0"
+  },
+  "nio/Replicator": {
+    "language": "Python",
+    "url": "git://github.com//nio-blocks/dynamic_replicator.git",
+    "version": "1.0.0"
   }
 }

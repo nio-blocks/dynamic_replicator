@@ -5,7 +5,7 @@ from nio.properties import Property, StringProperty, VersionProperty
 
 
 @discoverable
-class DynamicReplicator(Block):
+class Replicator(Block):
     """Each incoming signal is replicated x times, where x
     is the length of list. Each output signal with have a
     new attribute, title, with the value of the list.
