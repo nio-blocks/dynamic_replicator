@@ -2,7 +2,7 @@ from nio.block.terminals import DEFAULT_TERMINAL
 from nio.testing.block_test_case import NIOBlockTestCase
 from nio.signal.base import Signal
 
-from ..dynamic_replicator_block_deprecated import DynamicReplicator
+from ..replicator_block import Replicator
 
 
 class DummySignal(Signal):
@@ -13,11 +13,11 @@ class DummySignal(Signal):
         self.list = list
 
 
-class TestDynamicReplicator(NIOBlockTestCase):
+class TestReplicator(NIOBlockTestCase):
 
     def test_block(self):
         signals = [DummySignal("a banana!", [1, 2])]
-        blk = DynamicReplicator()
+        blk = Replicator()
         self.configure_block(blk, {'title': 'new_value',
                                    'list': '{{$list}}'})
         blk.start()
