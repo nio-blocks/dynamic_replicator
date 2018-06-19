@@ -12,8 +12,8 @@ class Replicator(Block):
 
     """
     version = VersionProperty("1.0.1")
-    title = StringProperty(title='Attribute Title', default='')
-    list = Property(title='List', default='')
+    list = Property(title='List', default='', order=0)
+    title = StringProperty(title='Attribute Title', default='', order=1)
 
     def process_signals(self, signals):
         return_signals = []
