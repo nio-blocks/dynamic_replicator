@@ -5,22 +5,8 @@
     "categories": [
       "Signal Modifier"
     ],
-    "properties": {
-      "list": {
-        "title": "List",
-        "type": "Type",
-        "description": "An expression property that needs to evaluate to a list. A signal will be notified from the block for each item in the list.",
-        "default": ""
-      },
-      "title": {
-        "title": "Attribute Title",
-        "type": "StringType",
-        "description": "Name of attribute to be added with the corresponding list value.",
-        "default": ""
-      }
-    },
-    "inputs": {},
-    "outputs": {},
-    "commands": {}
+    "tags": "replicate list title multiply copy",
+    "from_readme": "docs/replicator.md",
+    "from_python": "replicator_block.Replicator"
   }
 }
