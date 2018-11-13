@@ -4,7 +4,7 @@ The Replicator block multiplies each incoming signal. The number of multiplied s
 
 Properties
 ---
-- **List**: An expression property that needs to evaluate to a list. A signal will be notified from the block for each item in the list.
+- **List**: A signal attribute that needs to evaluate to a list. A signal will be notified from the block for each item in the list.
 - **Attribute Title**: Name of attribute to be added with the corresponding list value.
 
 Example
