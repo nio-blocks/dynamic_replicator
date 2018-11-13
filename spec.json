@@ -5,7 +5,7 @@
     "categories": [
       "Signal Modifier"
     ],
-    "tags": "replicate list title multiply copy",
+    "tags": "replicate list title multiply copy value key",
     "from_readme": "docs/replicator.md",
     "from_python": "replicator_block.Replicator"
   }
