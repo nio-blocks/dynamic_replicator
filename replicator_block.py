@@ -1,10 +1,8 @@
 from nio.block.base import Block
 from nio.signal.base import Signal
-from nio.util.discovery import discoverable
 from nio.properties import Property, StringProperty, VersionProperty
 
 
-@discoverable
 class Replicator(Block):
     """Each incoming signal is replicated x times, where x
     is the length of list. Each output signal with have a
