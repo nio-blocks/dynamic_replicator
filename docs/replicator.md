@@ -1,6 +1,6 @@
 Replicator
 ==========
-The Replicator block multiplies each incoming signal. The number of multiplied signals will be the same as the length of the list configured in the *list* property.  Each signal emitted will be the same as the original incoming signal, with an added attribute (Attribute Title) whose value corresponds to the *list* value at the same index.
+The Replicator block multiplies each incoming signal. The number of multiplied signals will be the same as the length of the list configured in the *list* property. Each signal emitted will be the same as the original incoming signal, with an added attribute (Attribute Title) whose value corresponds to the *list* value at the same index.
 
 Properties
 ---
